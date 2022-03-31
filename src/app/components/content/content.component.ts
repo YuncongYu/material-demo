@@ -6,7 +6,8 @@ export interface ComponentListItemModified {
   id: number,
   name: string,
   templateId: string,
-  component: Type<any>
+  component: Type<any>,
+  icon: string
 }
 
 @Component({

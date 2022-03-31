@@ -10,9 +10,27 @@ import { DropDownListComponent } from "../components/drop-down-list/drop-down-li
 export class ComponentListService {
   getComponents() {
     return [
-      { id: 1, name: 'Checkbox', templateId: 'checkbox', component: <Component>CheckboxComponent },
-      { id: 2, name: 'Radio Button', templateId: 'radio-button', component: <Component>RadioButtonComponent },
-      { id: 3, name: 'Drop-down List', templateId: 'drop-down-list', component: <Component>DropDownListComponent }
+      {
+        id: 1,
+        name: 'Checkbox',
+        templateId: 'checkbox',
+        component: <Component>CheckboxComponent,
+        icon: 'bi bi-check2-square'
+      },
+      {
+        id: 2,
+        name: 'Radio Button',
+        templateId: 'radio-button',
+        component: <Component>RadioButtonComponent,
+        icon: 'bi bi-ui-radios'
+      },
+      {
+        id: 3,
+        name: 'Drop-down List',
+        templateId: 'drop-down-list',
+        component: <Component>DropDownListComponent,
+        icon: 'bi bi-menu-button'
+      }
     ]
   }
 }

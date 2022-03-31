@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy:firebase": "ng build && firebase deploy",
+    "deploy:gh": "ng build --base-href='https://yuncongyu.github.io/material-demo/' && ngh --dir=dist/material-demo"
   },
   "private": true,
   "dependencies": {

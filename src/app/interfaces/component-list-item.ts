@@ -4,5 +4,6 @@ export interface ComponentListItem {
   id: number,
   name: string,
   templateId: string,
-  component: Component
+  component: Component,
+  icon: string
 }
