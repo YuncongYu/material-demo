@@ -1,0 +1,31 @@
+<h4><ng-content select="#heading"></ng-content></h4>
+
+<div class="container-fluid">
+  <div class="card-group">
+    <div class="card">
+      <h4 class="card-header">Native</h4>
+      <div class="card-body">
+        <ng-content select="#native"></ng-content>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="card-header">Bootstrap</h4>
+      <div class="card-body">
+        <ng-content select="#bootstrap"></ng-content>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4 class="card-header">Material</h4>
+      <div class="card-body">
+        <ng-content select="#material"></ng-content>
+      </div>
+    </div>
+  </div>
+
+  <p>
+    <ng-content select="#outcome"></ng-content>
+  </p>
+</div>
+

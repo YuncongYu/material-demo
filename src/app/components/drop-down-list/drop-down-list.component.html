@@ -1,0 +1,44 @@
+<app-component-template>
+  <div id="heading">Drop-down List</div>
+
+  <div id="native">
+    <label for="cars-select-native">Cars</label>
+    <select [(ngModel)]="selectedCar" name="cars" id="cars-select-native">
+      <option [value]="null" disabled>Select Car</option>
+      <option
+          *ngFor="let car of cars"
+          [value]="car.name"
+          [selected]="car.name === selectedCar"
+      >{{ car.name }}
+      </option>
+    </select>
+  </div>
+
+  <div id="bootstrap">
+    <label for="cars-select-native">Cars</label>
+    <select [(ngModel)]="selectedCar" name="cars" id="cars-select-bootstrap" class="form-select">
+      <option [value]="null" disabled selected>Select Car</option>
+      <option
+          *ngFor="let car of cars"
+          [value]="car.name"
+          [selected]="car.name === selectedCar"
+      >{{ car.name }}
+      </option>
+    </select>
+  </div>
+
+  <div id="material">
+    <mat-form-field>
+      <mat-label>Cars</mat-label>
+      <mat-select [(ngModel)]="selectedCar">
+        <mat-option *ngFor="let car of cars" [value]="car.name">
+          {{ car.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div id="outcome">
+    Selected car: {{ selectedCar }}
+  </div>
+</app-component-template>

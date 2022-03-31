@@ -1,0 +1,37 @@
+<div id="content">
+<!--  The sidebar unrolls vertically -->
+<!--  <nav class="navbar navbar-light bg-light border-bottom">-->
+<!--      <button-->
+<!--          type="button"-->
+<!--          id="sidebarCollapse"-->
+<!--          class="navbar-toggler"-->
+<!--          data-bs-toggle="collapse"-->
+<!--          data-bs-target="#sidebar"-->
+<!--      >-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+<!--  </nav>-->
+  <nav class="container-fluid sticky-top navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <button
+          type="button"
+          id="sidebarCollapse"
+          class="btn btn-outline-secondary"
+          (click)="onCollapseSidebar()"
+      >
+<!--        <fa-icon [icon]="barIcon" (click)="onCollapseSidebar()"></fa-icon>-->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  </nav>
+
+  <div class="container-fluid">
+    <h1 class="my-4">Native vs. Bootstrap vs. Material</h1>
+
+    <div class="d-grid gap-4">
+      <div *ngFor="let comp of componentList">
+        <div [id]="comp.templateId">
+          <ng-container *ngComponentOutlet="comp.component"></ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

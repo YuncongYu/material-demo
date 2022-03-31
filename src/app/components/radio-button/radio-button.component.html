@@ -1,0 +1,87 @@
+<app-component-template>
+  <div id="heading">Radio Button</div>
+
+  <div id="native">
+    <h5>Template Driven Form</h5>
+    <form
+        #genderFormNativeTemplate="ngForm"
+        (ngSubmit)="onGenderFormNativeTemplateSubmit(genderFormNativeTemplate)"
+        class="card-title">
+      <input type="radio" id="male-template" name="gender-native"
+             [ngModel]="gender" value="male" required #genderTemplate="ngModel">
+      <label for="male-template">Male</label>
+      <input type="radio" id="female-template" name="gender-native"
+             [ngModel]="gender" value="female" required #genderTemplate="ngModel">
+      <label for="female-template">Female</label>
+      <input type="radio" id="diverse-template" name="gender-native"
+             [ngModel]="gender" value="diverse" required #genderTemplate="ngModel">
+      <label for="diverse-template">Diverse</label>
+      <button>Submit</button>
+    </form>
+
+    <h5>Reactive Form</h5>
+    <form [formGroup]="genderFormNativeReactive" (ngSubmit)="onGenderFormNativeReactiveSubmit()">
+      <input type="radio" id="male-reactive" value="male" formControlName="gender"
+             [checked]="gender==='male'">
+      <label for="male-reactive">Male</label>
+      <input type="radio" id="female-reactive" value="female" formControlName="gender"
+             [checked]="gender==='female'">
+      <label for="female-reactive">Female</label>
+      <input type="radio" id="diverse-reactive" value="diverse" formControlName="gender"
+             [checked]="gender==='diverse'">
+      <label for="diverse-reactive">Diverse</label>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="bootstrap">
+    <form [formGroup]="genderFormNativeReactive" (ngSubmit)="onGenderFormNativeReactiveSubmit()">
+      <div class="form-check">
+        <input
+            type="radio"
+            class="form-check-input"
+            id="genderRadioBootstrapMale"
+            value="male"
+            formControlName="gender"
+            [checked]="gender==='male'">
+        <label for="genderRadioBootstrapMale" class="form-check-label">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+            type="radio"
+            class="form-check-input"
+            id="genderRadioBootstrapFemale"
+            value="female"
+            formControlName="gender"
+            [checked]="gender==='female'">
+        <label for="genderRadioBootstrapFemale" class="form-check-label">
+          Female
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+            type="radio"
+            class="form-check-input"
+            id="genderRadioBootstrapDiverse"
+            value="diverse"
+            formControlName="gender"
+            [checked]="gender==='diverse'">
+        <label for="genderRadioBootstrapDiverse" class="form-check-label">
+          Diverse
+        </label>
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </form>
+  </div>
+
+  <div id="material">
+    <mat-radio-group value="female" [(ngModel)]="gender">
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="diverse">Diverse</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+</app-component-template>
