@@ -1,0 +1,41 @@
+<app-component-template>
+  <div id="heading">
+    <i class="bi bi-calendar-date"></i>
+    Date Picker
+  </div>
+
+  <div id="native">
+    <label for="date-native">Date</label><br>
+    <input [(ngModel)]="date" type="date" id="date-native" name="date-native">
+  </div>
+
+  <div id="bootstrap">
+    <label for="date-bootstrap" class="form-label">Username</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Date</span><br>
+      <input [(ngModel)]="date" type="date" id="date-bootstrap" name="date-bootstrap" class="form-control">
+    </div>
+  </div>
+
+  <div id="material">
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="date"
+          [min]="minDate"
+          [max]="maxDate"
+          (focus)="picker.open()"
+      >
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker touchUi="true"></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div id="outcome">
+    Picked date: {{ date }}
+  </div>
+
+</app-component-template>

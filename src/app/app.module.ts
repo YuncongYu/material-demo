@@ -21,6 +21,9 @@ import { ComponentListService } from "./services/component-list.service";
 import { MatInputModule } from "@angular/material/input";
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { DatePickersComponent } from './components/date-pickers/date-pickers.component';
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -32,15 +35,18 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     InputComponent,
     SidebarComponent,
     ContentComponent,
-    TextareaComponent
+    TextareaComponent,
+    DatePickersComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatCheckboxModule,
+    MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
+    MatNativeDateModule,
     MatRadioModule,
     MatSelectModule,
     FormsModule,

@@ -4,6 +4,7 @@ import { RadioButtonComponent } from "../components/radio-button/radio-button.co
 import { DropDownListComponent } from "../components/drop-down-list/drop-down-list.component";
 import { InputComponent } from "../components/input/input.component";
 import { TextareaComponent } from "../components/textarea/textarea.component";
+import { DatePickersComponent } from "../components/date-pickers/date-pickers.component";
 
 
 @Injectable({
@@ -46,6 +47,13 @@ export class ComponentListService {
         templateId: "Textarea",
         component: <Component>TextareaComponent,
         icon: "bi bi-textarea-resize"
+      },
+      {
+        id: 6,
+        name: "Date Pickers",
+        templateId: "data-pickers",
+        component: <Component>DatePickersComponent,
+        icon: "bi bi-calendar-date"
       }
     ]
   }
