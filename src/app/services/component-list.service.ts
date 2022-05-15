@@ -5,6 +5,7 @@ import { DropDownListComponent } from "../components/drop-down-list/drop-down-li
 import { InputComponent } from "../components/input/input.component";
 import { TextareaComponent } from "../components/textarea/textarea.component";
 import { DatePickersComponent } from "../components/date-pickers/date-pickers.component";
+import { IconsComponent } from "../components/icons/icons.component";
 
 
 @Injectable({
@@ -54,6 +55,13 @@ export class ComponentListService {
         templateId: "data-pickers",
         component: <Component>DatePickersComponent,
         icon: "bi bi-calendar-date"
+      },
+      {
+        id: 7,
+        name: "Icons",
+        templateId: "icons",
+        component: <Component>IconsComponent,
+        icon: "bi bi-app"
       }
     ]
   }

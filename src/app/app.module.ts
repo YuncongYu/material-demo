@@ -24,6 +24,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { DatePickersComponent } from './components/date-pickers/date-pickers.component';
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatNativeDateModule } from "@angular/material/core";
+import { MatIconModule } from "@angular/material/icon";
+import { IconsComponent } from './components/icons/icons.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { MatNativeDateModule } from "@angular/material/core";
     SidebarComponent,
     ContentComponent,
     TextareaComponent,
-    DatePickersComponent
+    DatePickersComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { MatNativeDateModule } from "@angular/material/core";
     MatCheckboxModule,
     MatDatepickerModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     MatNativeDateModule,
     MatRadioModule,
