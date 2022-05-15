@@ -1,6 +1,35 @@
 <app-component-template>
-  <div id="heading">Input</div>
-  <div id="native">native</div>
-  <div id="bootstrap">bootstrap</div>
-  <div id="material">material</div>
+  <div id="heading">
+    <i class="bi bi-input-cursor-text"></i>
+    Input
+  </div>
+
+  <div id="native">
+    <form>
+      <label for="username-native">Username</label><br>
+      <input type="text" id="username-native" name="username" placeholder="Enter your username." ><br>
+    </form>
+  </div>
+
+  <div id="bootstrap">
+    <label for="username-bootstrap" class="form-label">Username</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text">admin.</span>
+      <input ngModel id="username-bootstrap" name="username" type="text" class="form-control" placeholder="Enter your username." required>
+      <span class="input-group-text">@example.com</span>
+    </div>
+  </div>
+
+  <div id="material">
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input ngModel name="username-material" matInput placeholder="Ex. Joe" required #usernameMaterial="ngModel">
+      <mat-hint>Enter your username.</mat-hint>
+      <span matPrefix>admin.</span>
+      <span matSuffix>@domain.com</span>
+      <mat-error *ngIf="usernameMaterial.invalid && usernameMaterial.errors?.required">
+        The username field is required.
+      </mat-error>
+    </mat-form-field>
+  </div>
 </app-component-template>

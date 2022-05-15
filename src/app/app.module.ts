@@ -18,6 +18,9 @@ import { ContentComponent } from './components/content/content.component';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { RouterModule } from '@angular/router';
 import { ComponentListService } from "./services/component-list.service";
+import { MatInputModule } from "@angular/material/input";
+import { TextareaComponent } from './components/textarea/textarea.component';
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 @NgModule({
   declarations: [
@@ -28,13 +31,16 @@ import { ComponentListService } from "./services/component-list.service";
     ComponentTemplateComponent,
     InputComponent,
     SidebarComponent,
-    ContentComponent
+    ContentComponent,
+    TextareaComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatRadioModule,
     MatSelectModule,
     FormsModule,
