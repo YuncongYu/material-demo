@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
+  public prefix = "admin.";
+  public suffix = "@domain.com"
+  public username = "";
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

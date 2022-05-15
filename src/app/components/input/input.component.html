@@ -7,29 +7,54 @@
   <div id="native">
     <form>
       <label for="username-native">Username</label><br>
-      <input type="text" id="username-native" name="username" placeholder="Enter your username." ><br>
+      admin.
+      <input
+          type="text"
+          id="username-native"
+          name="username"
+          placeholder="Enter your username."
+          [(ngModel)]="username"
+      >@example.com<br>
     </form>
   </div>
 
   <div id="bootstrap">
     <label for="username-bootstrap" class="form-label">Username</label>
     <div class="input-group mb-3">
-      <span class="input-group-text">admin.</span>
-      <input ngModel id="username-bootstrap" name="username" type="text" class="form-control" placeholder="Enter your username." required>
-      <span class="input-group-text">@example.com</span>
+      <span class="input-group-text">{{ prefix }}</span>
+      <input
+          [(ngModel)]="username"
+          id="username-bootstrap"
+          name="username"
+          type="text"
+          class="form-control"
+          placeholder="Enter your username."
+          required
+      >
+      <span class="input-group-text">{{ suffix }}</span>
     </div>
   </div>
 
   <div id="material">
     <mat-form-field>
       <mat-label>Username</mat-label>
-      <input ngModel name="username-material" matInput placeholder="Ex. Joe" required #usernameMaterial="ngModel">
+      <input
+          [(ngModel)]="username"
+          name="username-material"
+          matInput placeholder="Ex. Joe"
+          required
+          #usernameMaterial="ngModel">
       <mat-hint>Enter your username.</mat-hint>
-      <span matPrefix>admin.</span>
-      <span matSuffix>@domain.com</span>
+      <span matPrefix>{{ prefix }}</span>
+      <span matSuffix>{{ suffix }}</span>
       <mat-error *ngIf="usernameMaterial.invalid && usernameMaterial.errors?.required">
         The username field is required.
       </mat-error>
     </mat-form-field>
   </div>
+
+  <div id="outcome">
+    Email: {{ prefix + username + suffix }}
+  </div>
+
 </app-component-template>

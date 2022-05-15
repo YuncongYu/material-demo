@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./textarea.component.css']
 })
 export class TextareaComponent implements OnInit {
+  public comments = "";
 
   constructor() { }
 

@@ -6,13 +6,25 @@
 
   <div id="native">
     <label for="comments-native">Comments</label><br>
-    <textarea name="" id="comments-native" cols="50" rows="4"></textarea>
+    <textarea
+        [(ngModel)]="comments"
+        name=""
+        id="comments-native"
+        cols="30"
+        rows="4"
+    ></textarea>
   </div>
 
   <div id="bootstrap">
     <div class="form-floating">
-      <textarea name="comments-bootstrap" id="comments-bootstrap" class="form-control"
-                placeholder="Leave a comment here" style="height: 100px"></textarea>
+      <textarea
+          [(ngModel)]="comments"
+          name="comments-bootstrap"
+          id="comments-bootstrap"
+          class="form-control"
+          placeholder="Leave a comment here"
+          style="height: 100px"
+      ></textarea>
       <label for="comments-bootstrap">Comments</label>
     </div>
   </div>
@@ -20,9 +32,21 @@
   <div id="material">
     <mat-form-field appearance="fill">
       <mat-label>Comments</mat-label>
-      <textarea name="comments-material" id="comments-material" matInput cdkTextareaAutosize cdkAutosizeMinRows="2"
-                cdkAutosizeMaxRows="5"></textarea>
+      <textarea
+          [(ngModel)]="comments"
+          name="comments-material"
+          id="comments-material"
+          matInput
+          cdkTextareaAutosize
+          cdkAutosizeMinRows="2"
+          cdkAutosizeMaxRows="5"
+      ></textarea>
     </mat-form-field>
+  </div>
+
+  <div id="outcome">
+    Comments:
+    {{ comments }}
   </div>
 
 </app-component-template>
